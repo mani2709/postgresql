@@ -22,8 +22,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
 
 #from flask import Flask, render_template, flash, request,jsonify
 
-manager = Manager(app)
-migrate = Migrate(app, db)
+manager = Manager(holiday)
+migrate = Migrate(holiday, db)
 manager.add_command('db', MigrateCommand)
 
 class d_holiday(db.Model):
